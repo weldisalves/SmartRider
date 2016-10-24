@@ -41,26 +41,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent">
 
-                <LinearLayout
-                    android:orientation="horizontal"
+                <TextView
+                    android:text="TextView"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1">
-
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txtViewId"
-                        android:layout_weight="1" />
-
-                    <TextView
-                        android:text="TextView"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:id="@+id/txtViewNome"
-                        android:layout_weight="1" />
-                </LinearLayout>
+                    android:id="@+id/txtViewNome"
+                    android:layout_weight="1" />
 
                 <TextView
                     android:text="TextView"

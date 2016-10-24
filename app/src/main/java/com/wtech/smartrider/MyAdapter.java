@@ -35,13 +35,11 @@ public class MyAdapter extends ArrayAdapter<Condutor>{
 
         ImageView imageView = (ImageView)v.findViewById(R.id.imgPerfil);
         RatingBar ratingBar = (RatingBar)v.findViewById(R.id.ratingBar);
-        TextView textViewId = (TextView)v.findViewById(R.id.txtViewId);
         TextView textViewNome = (TextView)v.findViewById(R.id.txtViewNome);
         TextView textViewHoraDapartida = (TextView)v.findViewById(R.id.txtViewHoraDaPartida);
         TextView textViewPontoDePartida = (TextView)v.findViewById(R.id.txtViewPontoDePartida);
         TextView textViewPontoDeChegada = (TextView)v.findViewById(R.id.txtViewPontoDeChegada);
 
-        //textViewId.setText(condutor.getId());
         textViewNome.setText(condutor.getNome());
         textViewHoraDapartida.setText(condutor.getHoraDaPartida());
 
