@@ -14,19 +14,35 @@ public class Condutor implements Serializable {
     private String imgPerfil;
     private int id;
     private String nome;
-    private RatingBar ratingBar;
+    private float ratingBar;
     private String horaDaPartida;
     private String pontoDePartida;
     private String pontoDeChegada;
 
+    private String pontosVirtuais;
+    private int numeroDeVagas;
+
     public Condutor() {
     }
 
-    public Condutor(int id, String nome, String horaDaPartida) {
-        this.id = id;
-        this.nome = nome;
-        this.horaDaPartida = horaDaPartida;
+
+    public String getPontosVirtuais() {
+        return pontosVirtuais;
     }
+
+    public void setPontosVirtuais(String pontosVirtuais) {
+        this.pontosVirtuais = pontosVirtuais;
+    }
+
+    public int getNumeroDeVagas() {
+        return numeroDeVagas;
+    }
+
+    public void setNumeroDeVagas(int numeroDeVagas) {
+        this.numeroDeVagas = numeroDeVagas;
+    }
+
+
 
     public String getImgVeiculo() {
         return imgVeiculo;
@@ -60,11 +76,11 @@ public class Condutor implements Serializable {
         this.nome = nome;
     }
 
-    public RatingBar getRatingBar() {
+    public float getRatingBar() {
         return ratingBar;
     }
 
-    public void setRatingBar(RatingBar ratingBar) {
+    public void setRatingBar(float ratingBar) {
         this.ratingBar = ratingBar;
     }
 

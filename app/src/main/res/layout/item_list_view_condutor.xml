@@ -19,7 +19,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/ratingBar"
-            style="@style/Widget.AppCompat.RatingBar.Small" />
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:numStars="5" />
 
     </LinearLayout>
 

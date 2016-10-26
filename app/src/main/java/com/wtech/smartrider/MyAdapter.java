@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,15 +22,21 @@ public class MyAdapter extends ArrayAdapter<Condutor>{
 
     private final LayoutInflater inflater;
     private final int recursoId;
+    private final ArrayList<Condutor> condutors;
 
-    public MyAdapter(Context context, int resource, List<Condutor> objects){
+    public MyAdapter(Context context, int resource, ArrayList<Condutor> objects){
         super(context,resource,objects);
         this.inflater = LayoutInflater.from(context);
         this.recursoId = resource;
+        condutors = objects;
     }
 
     @Override
+    public int getCount(){return super.getCount();}
+
+    @Override
     public View getView(int position, View v, ViewGroup parent){
+
         Condutor condutor = getItem(position);
         v = inflater.inflate(recursoId,parent,false);
 
@@ -42,6 +49,13 @@ public class MyAdapter extends ArrayAdapter<Condutor>{
 
         textViewNome.setText(condutor.getNome());
         textViewHoraDapartida.setText(condutor.getHoraDaPartida());
+        textViewPontoDePartida.setText(condutor.getPontoDePartida());
+        textViewPontoDeChegada.setText(condutor.getPontoDeChegada());
+
+        ratingBar.setNumStars(5);
+        ratingBar.setRating(condutor.getRatingBar());
+
+        condutors.add(condutor);
 
         return v;
     }
