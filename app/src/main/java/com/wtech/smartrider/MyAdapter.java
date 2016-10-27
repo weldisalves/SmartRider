@@ -5,14 +5,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by weldis on 24/10/16.
@@ -20,14 +16,10 @@ import java.util.List;
 
 public class MyAdapter extends ArrayAdapter<Condutor>{
 
-    private final LayoutInflater inflater;
-    private final int recursoId;
     private final ArrayList<Condutor> condutors;
 
     public MyAdapter(Context context, int resource, ArrayList<Condutor> objects){
         super(context,resource,objects);
-        this.inflater = LayoutInflater.from(context);
-        this.recursoId = resource;
         condutors = objects;
     }
 
@@ -35,27 +27,26 @@ public class MyAdapter extends ArrayAdapter<Condutor>{
     public int getCount(){return super.getCount();}
 
     @Override
-    public View getView(int position, View v, ViewGroup parent){
+    public View getView(int position, View convertView, ViewGroup parent){
 
-        Condutor condutor = getItem(position);
-        v = inflater.inflate(recursoId,parent,false);
+        View v = convertView;
 
-        ImageView imageView = (ImageView)v.findViewById(R.id.imgPerfil);
+        LayoutInflater inflater = (LayoutInflater)getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+
+        v = inflater.inflate(R.layout.item_list_view_condutor,null);
+
         RatingBar ratingBar = (RatingBar)v.findViewById(R.id.ratingBar);
         TextView textViewNome = (TextView)v.findViewById(R.id.txtViewNome);
         TextView textViewHoraDapartida = (TextView)v.findViewById(R.id.txtViewHoraDaPartida);
         TextView textViewPontoDePartida = (TextView)v.findViewById(R.id.txtViewPontoDePartida);
         TextView textViewPontoDeChegada = (TextView)v.findViewById(R.id.txtViewPontoDeChegada);
 
-        textViewNome.setText(condutor.getNome());
-        textViewHoraDapartida.setText(condutor.getHoraDaPartida());
-        textViewPontoDePartida.setText(condutor.getPontoDePartida());
-        textViewPontoDeChegada.setText(condutor.getPontoDeChegada());
+        textViewNome.setText(condutors.get(position).getNome());
+        textViewHoraDapartida.setText(condutors.get(position).getHoraDaPartida());
+        textViewPontoDePartida.setText(condutors.get(position).getPontoDePartida());
+        textViewPontoDeChegada.setText(condutors.get(position).getPontoDeChegada());
 
-        ratingBar.setNumStars(5);
-        ratingBar.setRating(condutor.getRatingBar());
-
-        condutors.add(condutor);
+        ratingBar.setRating(condutors.get(position).getRatingBar());
 
         return v;
     }

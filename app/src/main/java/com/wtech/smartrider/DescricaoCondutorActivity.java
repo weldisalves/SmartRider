@@ -36,8 +36,8 @@ public class DescricaoCondutorActivity extends AppCompatActivity {
         ratingBar = (RatingBar)findViewById(R.id.ratingBar);
         textViewPontoDePartida = (TextView)findViewById(R.id.txtViewPontoDePartida);
         textViewPontoDeChegada = (TextView)findViewById(R.id.txtViewPontoDeChegada);
-//        textViewPontosVirtuais = (TextView)findViewById(R.id.txtViewPontosVirtuais);
-//        textViewNumeroDeVagas = (TextView)findViewById(R.id.txtViewNumeroDeVagas);
+        textViewPontosVirtuais = (TextView)findViewById(R.id.txtViewPontosVirtuais);
+        textViewNumeroDeVagas = (TextView)findViewById(R.id.txtViewNumeroDeVagas);
 
         textViewNome.setText(condutor.getNome());
         textViewHoraDaPartida.setText(condutor.getHoraDaPartida());
@@ -45,8 +45,8 @@ public class DescricaoCondutorActivity extends AppCompatActivity {
         ratingBar.setRating(condutor.getRatingBar());
         textViewPontoDePartida.setText(condutor.getPontoDePartida());
         textViewPontoDeChegada.setText(condutor.getPontoDeChegada());
-//        textViewPontosVirtuais.setText(condutor.getPontosVirtuais());
-//        textViewNumeroDeVagas.setText("4");
+        //textViewPontosVirtuais.setText(condutor.getPontosVirtuais());
+        //textViewNumeroDeVagas.setText(String.valueOf(condutor.getNumeroDeVagas()));
 
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
