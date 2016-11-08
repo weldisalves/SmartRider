@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wtech.smartrider">
-    
-    <uses-permission android:name="android.permission.INTERNET"/>
-    
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -21,22 +19,18 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ListViewCondutoresActivity"
+            android:name=".ListViewCaronas"
             android:label="@string/title_activity_list_view_condutores"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.wtech.smartrider.MainActivity" />
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".DescricaoCondutorActivity"
-            android:label="@string/title_activity_descricao_condutor"
-            android:parentActivityName=".ListViewCondutoresActivity"
+            android:name=".DescricaoCarona"
+            android:label="@string/title_activity_descricao_carona"
             android:theme="@style/AppTheme.NoActionBar">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.wtech.smartrider.ListViewCondutoresActivity" />
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

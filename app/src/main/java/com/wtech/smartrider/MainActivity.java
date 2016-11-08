@@ -20,13 +20,21 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button btnEntrar = (Button) findViewById(R.id.btEntrar);
+        Button btnEntrar = (Button)findViewById(R.id.btEntrar);
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ListViewCondutoresActivity.class);
+                Intent intent = new Intent(MainActivity.this,ListViewCaronas.class);
                 startActivity(intent);
-                finish();
+            }
+        });
+
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
             }
         });
     }

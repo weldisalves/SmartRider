@@ -5,44 +5,27 @@ import android.widget.RatingBar;
 import java.io.Serializable;
 
 /**
- * Created by weldis on 24/10/16.
+ * Created by weldis on 03/11/16.
  */
+public class Condutor extends Pessoa implements Serializable{
 
-public class Condutor implements Serializable {
-
+    private int idCondutor;
     private String imgVeiculo;
-    private String imgPerfil;
-    private int id;
-    private String nome;
+    private float somaDasNotas;
+    private float numeroDeAvaliacoes;
     private float ratingBar;
-    private String horaDaPartida;
-    private String pontoDePartida;
-    private String pontoDeChegada;
-
-    private String pontosVirtuais;
-    private int numeroDeVagas;
 
     public Condutor() {
+        super();
     }
 
-
-    public String getPontosVirtuais() {
-        return pontosVirtuais;
+    public int getIdCondutor() {
+        return idCondutor;
     }
 
-    public void setPontosVirtuais(String pontosVirtuais) {
-        this.pontosVirtuais = pontosVirtuais;
+    public void setIdCondutor(int idCondutor) {
+        this.idCondutor = idCondutor;
     }
-
-    public int getNumeroDeVagas() {
-        return numeroDeVagas;
-    }
-
-    public void setNumeroDeVagas(int numeroDeVagas) {
-        this.numeroDeVagas = numeroDeVagas;
-    }
-
-
 
     public String getImgVeiculo() {
         return imgVeiculo;
@@ -52,28 +35,20 @@ public class Condutor implements Serializable {
         this.imgVeiculo = imgVeiculo;
     }
 
-    public String getImgPerfil() {
-        return imgPerfil;
+    public float getSomaDasNotas() {
+        return somaDasNotas;
     }
 
-    public void setImgPerfil(String imgPerfil) {
-        this.imgPerfil = imgPerfil;
+    public void setSomaDasNotas(float somaDasNotas) {
+        this.somaDasNotas = somaDasNotas;
     }
 
-    public int getId() {
-        return id;
+    public float getNumeroDeAvaliacoes() {
+        return numeroDeAvaliacoes;
     }
 
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNumeroDeAvaliacoes(float numeroDeAvaliacoes) {
+        this.numeroDeAvaliacoes = numeroDeAvaliacoes;
     }
 
     public float getRatingBar() {
@@ -82,29 +57,5 @@ public class Condutor implements Serializable {
 
     public void setRatingBar(float ratingBar) {
         this.ratingBar = ratingBar;
-    }
-
-    public String getHoraDaPartida() {
-        return horaDaPartida;
-    }
-
-    public void setHoraDaPartida(String horaDaPartida) {
-        this.horaDaPartida = horaDaPartida;
-    }
-
-    public String getPontoDePartida() {
-        return pontoDePartida;
-    }
-
-    public void setPontoDePartida(String pontoDePartida) {
-        this.pontoDePartida = pontoDePartida;
-    }
-
-    public String getPontoDeChegada() {
-        return pontoDeChegada;
-    }
-
-    public void setPontoDeChegada(String pontoDeChegada) {
-        this.pontoDeChegada = pontoDeChegada;
     }
 }

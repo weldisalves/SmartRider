@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">SmartRider</string>
     <string name="action_settings">Settings</string>
-    <string name="title_activity_list_view_condutores">Condutores</string>
-    <string name="title_activity_descricao_condutor">DescricaoCondutorActivity</string>
+    <string name="title_activity_lista_de_condutores">ListaDeCondutores</string>
+    <string name="title_activity_list_view_condutores">ListViewCondutores</string>
+    <string name="title_activity_descricao_carona">DescricaoCarona</string>
 </resources>
